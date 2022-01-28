@@ -112,6 +112,7 @@
     justify-content: space-between;
     height: 80px;
     z-index: 1;
+    width: 100%;
     max-width: 1300px;
     padding: 0;
   }
@@ -124,7 +125,7 @@
     top: -1000px;
     opacity: 0;
     transition: all 0.5s ease;
-    height: 50hv;
+    height: 50vh;
     z-index: -1;
     background: #131313;
   }
@@ -138,7 +139,7 @@
     font-size: 1.6rem;
   }
   #navbar__logo {
-    padding: 25px;
+    padding-left: 25px;
   }
   .navbar__toggle .bar {
     width: 25px;
@@ -189,7 +190,8 @@
   }
 }
 
-/* hero section CSS*/
+/* hero section CSS */
+
 .main {
   background-color: #141414;
 }
@@ -205,7 +207,7 @@
   z-index: 1;
   width: 100%;
   max-width: 1300px;
-  padding: 0 50px;
+  padding: 0 50px; 
 }
 
 .main__content h1 {
@@ -278,7 +280,7 @@
   width: 100%;
 }
 
-.main__img--content {
+.main__img--container {
   text-align: center;
 }
 
@@ -288,8 +290,9 @@
 }
 
 /* mobile responsive */
-@media screen and (max-width: 768px) {
-  .navbar__container {
+
+ @media screen and (max-width: 768px) {
+  .main__container {
     display: grid;
     grid-template-columns: auto;
     align-items: center;
@@ -304,7 +307,6 @@
   }
   .main__content h1 {
     font-size: 2.5rem;
-    /*margin-top: 2rem;*/
   }
   .main__content h2 {
     font-size: 3rem;
@@ -334,4 +336,98 @@
     padding: 12px 36px;
     margin: 2.5rem 0;
   }
+} 
+
+
+
+/* Servies Section CSS */
+
+.services {
+  background: #141414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
+
+.services h1{
+  background-color: #ff8177;  
+  background-image: linear-gradient(
+    to right,
+  #ff8177 0%,
+  #ff867a 0%,
+  #ff8c7f 21%,
+  #f99185 52%,
+  #cf556c 78%,
+  #b12a5b 100%
+  );
+  background-size: 100%;
+  margin-bottom: 5rem;
+  font-size: 2.5em;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.services__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.services__card {
+  margin: 1rem;
+  height: 525px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%
+  ),
+  url('/images/pic3.jpg');
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.services__card:nth-child(2) {
+  background-image: linear-gradient(
+    to bottom,
+     rgba(0,0,0,0) 0%,
+     rgba(17,17,17,0.6) 100%
+     ),
+     url('/images/pic4.jpg')
+}
+
+.services h2 {
+  position: absolute;
+  top: 350px;
+  left: 30px;
+}
+
+.services__card p {
+  position: absolute;
+  top: 400px;
+  left: 30px;
+}
+
+.services__card button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #f77062;
+  position: absolute;
+  top: 440px;
+  left: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.services__card:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+
